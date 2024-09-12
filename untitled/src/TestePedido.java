@@ -14,6 +14,7 @@ public class TestePedido {
 
         pedido.adicionarItem(item1);
         pedido.adicionarItem(item2);
+        pedido.removerItem(item2);
 
         Pagamento pagamento = new Pagamento("Cartão de Crédito", 1);
         pedido.definirPagamento(pagamento);

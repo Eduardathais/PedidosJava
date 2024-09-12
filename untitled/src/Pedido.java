@@ -21,6 +21,16 @@ public class Pedido {
         }
     }
 
+    public void removerItem(Item item) {
+        if (itens.contains(item)) {
+            itens.remove(item);
+            estoque.adicionarItem(item.getNome(), item.getQuantidade(), item.getPreco());
+            System.out.println("Item " + item.getNome() + " removido do pedido.");
+        } else {
+            System.out.println("Item " + item.getNome() + " não encontrado no pedido.");
+        }
+    }
+
     public void definirPagamento(Pagamento pagamento) {
         this.pagamento = pagamento;
     }
